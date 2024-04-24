@@ -53,7 +53,8 @@ const postCustomer = async () => {
     );
        console.log(`Customer updated!`);
     } else if (welcome === `4`){
-        const deleteId = prompt (`what is the ID of the customer you would like to delete?`)
+        const All = await Schema.find({})
+        const deleteId = prompt (`what is the ID of the customer you would like to delete? Scan the list below to find the matching ID: \n ${All}`)
 
         await Schema.findByIdAndDelete(deleteId)
     
