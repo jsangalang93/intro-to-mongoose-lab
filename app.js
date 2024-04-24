@@ -29,5 +29,6 @@ const runQueries = async () => {
     // await findTodos()
     // await deleteTodo()
     await updateTodo()
+}
 
 connect()
