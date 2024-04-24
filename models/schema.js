@@ -10,5 +10,6 @@ const labSchema = new mongoose.Schema({
         required: true
     }
 })
+const Schema = mongoose.models ('Schema', schema.js)
 
-module.exports = schema;
+module.exports = Schema;
