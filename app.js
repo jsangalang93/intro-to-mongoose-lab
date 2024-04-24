@@ -38,18 +38,21 @@ const postCustomer = async () => {
     } else if (welcome === `3`){
         const All = await Schema.find({})
         console.log(`Here are all the customers: \n ${All}`)
+
         const UpdateId = prompt(`what is the ID of the customer you would like to update?`)
-        await Schema.findByIdAndUpdate(
-            UpdateId,
-            { isComplete: true },
-            { new: true },
-        );
+        
+        
         const updateName = prompt(`What is the customers new name?`)
         const updateAge = prompt(`What is the customers new age?`)
-        const customerInfo = Schema({
-            updateName: updateName,
-            updateAge: updateAge,
-        })
+        
+        await Schema.findByIdAndUpdate (UpdateId,{
+            name: updateName,
+            age: updateAge,
+        }
+        
+    );
+       console.log(`Customer updated!`);
+    } else if (welcome === `4`){
         
     }
     
