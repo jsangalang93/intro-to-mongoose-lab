@@ -6,10 +6,10 @@ const labSchema = new mongoose.Schema({
         required: true
     },
     age: {
-        type: number,
+        type: Number,
         required: true
     }
 })
-const Schema = mongoose.models ('Schema', schema.js)
+const Schema = mongoose.model('Schema', labSchema)
 
 module.exports = Schema;
