@@ -10,3 +10,5 @@ const labSchema = new mongoose.Schema({
         required: true
     }
 })
+
+module.exports = schema;
